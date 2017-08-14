@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>form</title>
+    <script type="text/javascript">
+        function reset(){
+            var form = document.getElementById("form");
+            form.reset();
+        }
+    </script>
 </head>
 <body>
 <form action="post" id="form">
@@ -15,7 +21,7 @@
         <input type="password" id="password">
     </div>
     <button type="submit">submit form</button>
-    <button type="reset"> reset form</button>
+    <button type="button" onclick="reset()"> reset form</button>
 </form>
 </body>
 </html>
