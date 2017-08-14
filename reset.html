@@ -17,8 +17,14 @@
         window.onload = function(){
             var form = document.getElementById("form");
             var element = form.elements[0];
-            if(element.autofocus !== true){
-                element.focus();
+//            if(element.autofocus !== true){
+//                element.focus();
+//            }
+            element.onfocus = function(event){
+                var target = event.target;
+                if(target.style.background != "red"){
+                    target.style.background = "pink"
+                }
             }
         }
     </script>
