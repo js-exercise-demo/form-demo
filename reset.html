@@ -22,10 +22,22 @@
 //            }
             element.onfocus = function(event){
                 var target = event.target;
-                if(target.style.background != "red"){
-                    target.style.background = "pink"
+//                if(target.style.background != "red"){
+//                    target.style.background = "pink"
+//                }
+                target.style.background = "pink"
+            }
+            element.onblur = function(event){
+                var target = event.target;
+                var judge = /^[0-9]*/.test(target.value);
+                console.log(judge)
+                if(judge){
+                    target.style.background = "blue";
+                }else{
+                    target.style.background = "red";
                 }
             }
+            
         }
     </script>
 </head>
