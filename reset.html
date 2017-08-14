@@ -8,19 +8,25 @@
             var form = document.getElementById("form");
             form.reset();
         }
+        function element(){
+            var form = document.getElementById("form");
+            var name = form.elements[0];
+            var password = form.elements['password'];
+            alert(name,password)
+        }
     </script>
 </head>
 <body>
 <form action="post" id="form">
     <div>
         <lable>姓名：</lable>
-        <input type="text" id="name">
+        <input type="text" id="name" name="name" autofocus>
     </div>
     <div>
         <lable>密码：</lable>
-        <input type="password" id="password">
+        <input type="password" id="password" name="password">
     </div>
-    <button type="submit">submit form</button>
+    <button type="button" onclick="element()">submit form</button>
     <button type="button" onclick="reset()"> reset form</button>
 </form>
 </body>
