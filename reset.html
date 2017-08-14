@@ -14,13 +14,20 @@
             var password = form.elements['password'];
             alert(name,password)
         }
+        window.onload = function(){
+            var form = document.getElementById("form");
+            var element = form.elements[0];
+            if(element.autofocus !== true){
+                element.focus();
+            }
+        }
     </script>
 </head>
 <body>
 <form action="post" id="form">
     <div>
         <lable>姓名：</lable>
-        <input type="text" id="name" name="name" autofocus>
+        <input type="text" id="name" name="name" >
     </div>
     <div>
         <lable>密码：</lable>
